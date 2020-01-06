@@ -1,0 +1,85 @@
+/*h1 {
+    color: grey;
+}
+
+img {
+    width: 250px;
+}*/
+
+
+/*this is for the entire site*/
+body{
+    color: #333333;
+    font-family: arial;
+    max-width:650px;
+    /*spacing property 0 means we are not messing up top and 
+    bottom and auto will evenly distribute from left and right*/
+    margin: 0 auto;
+    /*Top and bottom are untouched and to stop it from sticking 
+    to a a particular side it is shifted 16 pixels away */
+    padding: 0 16px;
+
+
+    /* We are using flex to push the header up and footer down*/
+    display: flex;
+    flex-direction: column;
+    /*Setting up the height, this is to set to
+     select how much area to cover*/
+    min-height: 100vh;
+}
+footer {
+    color: white;
+    border-top: 1px solid #666666;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+.main-content{
+    flex-grow: 1;
+}
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+h1 {
+    font-size: 40px;
+    margin-bottom: 14px;
+}
+/*Here we are targeting for any link inside 
+the header*/
+header a {
+    color: white;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+
+/*We use this to particularly target a particular picture
+rather than the site*/
+.portrait
+{
+    width: 250px;
+}
+input 
+{
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+button{
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+}
+
+html { 
+    background: url("/img/weat.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  p{
+      color: blue;
+      font-size: 20px;
+  }
