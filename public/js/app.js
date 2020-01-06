@@ -49,7 +49,9 @@ msg2.textContent = ''
     {
         msg1.textContent  ="Please provide some data"
     }
-    fetch('http://localhost:3000/weather?address='+location).then((response)=>
+
+    // we need to remove local host when deploying so we need to use heroku
+    fetch('/weather?address='+location).then((response)=>
 {     
     response.json().then((data)=>{
         if(data.error)

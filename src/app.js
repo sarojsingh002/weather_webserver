@@ -12,6 +12,10 @@ const forecast = require('./utils/forecast')
 // is located
 console.log(__dirname)
 
+//this is set by heroku so we are extracting it we can also set our own port
+// or tell if the first value doesn't exist it falls back to the port 3000
+const port = process.env.PORT || 3000
+
 
 //express is a function
 const app = express()
@@ -114,9 +118,11 @@ app.get("*",(req,res)=>
 
 //this starts the server and makes it listen on the 
 //certain port
-app.listen(3000,() =>
+//for local machine 3000 is fine but for deployment we need to specify the port
+
+app.listen(port,() =>
 {
-    console.log('server is up on port 3000')
+    console.log('server is up on port '+port)
 })
 
 
